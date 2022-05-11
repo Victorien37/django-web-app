@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<h1>Contactez-nous</h1>
+<p>Nous sommes là pour vous aider.</p>
+
+<form action="" method="post" novalidate>
+{% csrf_token %} <!--Ajout de sécurité dans le formulaire-->
+{{ form.as_p }} <!--Le .as_p correspond à la mise à la ligne de chaque éléments du formulaire-->
+<input type="submit" value="Envoyer">
+</form>
+{% endblock %}
